@@ -1,6 +1,6 @@
 use std::env;
 use std::fs::File;
-use std::io::Error;
+use std::io::{Write, BufReader, BufRead, Error};
 
 fn main() -> Result<(),Error>{
     //쿼리를 받아오고
@@ -54,17 +54,26 @@ fn check_up(index:usize, mut arr:Vec<String>){ //쿼리가 잘 되어있는지 �
     }
 }
 
-fn add_list(to_add:String){
-    println!("{}",to_add);
-    let path = "test.txt";
-    // let mut output = File::create(path)?;
-    todo!("read index and write on file");
+fn add_list(to_add:String) -> Result<(),Error> {
+    println!("( {} ) was added!",to_add);
+    let path = "todo.txt";
+    let mut output = File::create(path)?;
+    write!(output, "{}",to_add)?;
+    
+    // todo!("read index and write on file");
+    Ok(())
 }
 fn del_list(to_del:&str){
     todo!("read index and write on file");
 }
 fn view_list(){
-    todo!("file read and show list")
+    let file = File::open("todo.txt").unwrap();
+    let mut count:u32=1;
+    for line in BufReader::new(file).lines() {
+        println!("todo {}: {}", count, line.unwrap());
+        count+=1;
+    }
+    println!("total {}",count);
     
 }
 fn clear_list() {

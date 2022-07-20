@@ -1,6 +1,6 @@
 # Rust_todoList
 
-~~더러운 코드와 함께~~ 내가 쓰려고 간단하게(?) 완성해본 Todo list 임. <br>
+~~더러운 코드와 함께~~ 내가 쓰려고 간단하게(?)만든 Todo list 임. <br>
 
 powershell이나 자신의 쉘에 등록을 하면 간편하게(?) 쓸수 있음.<br>
 + 윈도우 환경 (on Powershell profile)

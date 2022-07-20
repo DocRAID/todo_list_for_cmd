@@ -20,3 +20,5 @@ powershell이나 자신의 쉘에 등록을 하면 간편하게(?) 쓸수 있음
 기본 Todo.txt 의 기본 경로는 사용자의 document directory에 있습니다. (없다면 만들어주세요)
 ***
 _Result : Rust 기본 문법을 익히고 Rust 파일 시스템, osString, 오류제어 문법을 다루어 보며 실습함._
+<br>
+_Todo : 러스트를 더 배우며 코드 최적화._

@@ -2,6 +2,8 @@
 
 ~~더러운 코드와 함께~~ 내가 쓰려고 간단하게(?)만든 Todo list 임. <br>
 
+러스트 다운로드 > clone > (해당경로 가서) cargo build --release > build 파일에 있는 실행파일 등록 > 사용
+
 powershell이나 자신의 쉘에 등록을 하면 간편하게(?) 쓸수 있음.<br>
 + 윈도우 환경 (on Powershell_profile)
   + Set-Alias todo C:\[설치경로]\todoList.exe

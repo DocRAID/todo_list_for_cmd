@@ -10,7 +10,7 @@ powershell이나 자신의 쉘에 등록을 하면 간편하게 쓸수 있음.<b
  
  와 같은 방법으로 사용.
  
-#명령어
+# 명령어
 + todo : 명령어를 보여줍니다.
 + todo add [your todo] : [your todo] 에 작성된 할 일을 추가합니다.
 + todo rm [todo's id] : todd id를 기반으로 삭제합니다.

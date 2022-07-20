@@ -6,9 +6,9 @@ powershell이나 자신의 쉘에 등록을 하면 간편하게(?) 쓸수 있음
 + 윈도우 환경 (on Powershell profile)
   + Set-Alias todo C:\[설치경로]\todoList.exe
 + 리눅스 환경 (on shell)
-  + alias todo=[설치경로]\todoList
+  + alias todo='[설치경로]\todoList' (on .bash_profile)
 + 유닉스 환경
-  + 그런거 몰라... 무서워... 
+  + 리눅스와 동일
  
  와 같은 방법으로 사용.
  

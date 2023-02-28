@@ -3,7 +3,7 @@ use std::path::PathBuf;
 
 mod function;
 fn main() {
-    let path: PathBuf = function::new().expect("Err: Unable to access document directory.");
+    let path: PathBuf = function::new();
     let query: Query = function::set_query();
 
     match function::get_main_query(&query).as_str() {

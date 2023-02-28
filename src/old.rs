@@ -12,6 +12,7 @@ fn main() -> Result<(),Error>{
     file_exist(document_path.clone()).expect("err on file exist checking");
     //쿼리를 받아오고
     let mut args: Vec<String> = env::args().collect();
+    
     //쿼리 유효성 검사
     check_up(1, args.clone());
     let query = &args[1];

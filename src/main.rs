@@ -1,36 +1,28 @@
-use std::{path::PathBuf, fmt::Error, fs::File};
-
+mod function;
 fn main() {
-    let path = Setting::new();
-    
-}
-struct Setting {
-    query:String,
-    sub_query:Option<String>
-}
-impl Setting {
-    fn new () -> Result<PathBuf,Error> {
-        let mut document_path = dirs::document_dir().unwrap();
-        document_path.push("todoList");
-        document_path.push("todo.txt");
-        Ok(document_path)
-    }
+    let path = function::new().expect("Err: Unable to access document directory.");
+    let query = function::set_query();
 
-    fn show_cmd(){
-        println!("welcome to Todo List!");
-        println!("add [your todo] : input your Todos");
-        println!("rm [todo's id] : delete your Todos");
-        println!("ls : show your Todos");
-        println!("clear : clear Todos.");
-    }
-
-    fn file_exist(path:PathBuf) -> Result<(),Error>{ //파일이 존재하는지 확인.
-        let exits = path.exists();
-    
-        if !exits {
-            println!("created file!");
-            File::create(path).expect("Setting Err: file create failed");
+    match function::get_main_query(&query).as_str() {
+        "add" => {
+            function::list_add(&path,query);
         }
-        Ok(())
+        "rm" | "remove" => {
+            function::list_remove(&path,query);
+        }
+        "ls" => {
+            function::list_segments(&path);
+        }
+        "clear" | "cls" => {
+            function::list_clear(&path);
+        }
+        "location" | "loc" => {
+            function::show_location(&path);
+        }
+        _ => {
+            println!("Command does not exist.\nFollow the instructions below.");
+            function::show_cmd();
+        }
     }
+    return;
 }

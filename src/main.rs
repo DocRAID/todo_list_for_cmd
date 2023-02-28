@@ -1,14 +1,17 @@
+use function::Query;
+use std::path::PathBuf;
+
 mod function;
 fn main() {
-    let path = function::new().expect("Err: Unable to access document directory.");
-    let query = function::set_query();
+    let path: PathBuf = function::new().expect("Err: Unable to access document directory.");
+    let query: Query = function::set_query();
 
     match function::get_main_query(&query).as_str() {
         "add" => {
-            function::list_add(&path,query);
+            function::list_add(&path, query);
         }
         "rm" | "remove" => {
-            function::list_remove(&path,query);
+            function::list_remove(&path, query);
         }
         "ls" => {
             function::list_segments(&path);

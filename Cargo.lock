@@ -121,8 +121,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "todoList"
-version = "0.1.0"
+name = "todo"
+version = "1.0.1"
 dependencies = [
  "dirs",
 ]

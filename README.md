@@ -1,18 +1,8 @@
 # Rust_todoList
 
-~~더러운 코드와 함께~~ 내가 쓰려고 간단하게(?)만든 Todo list 임. <br>
+내가 쓰려고 만든 Todo list. <br>
 
-러스트 다운로드 > clone > (해당경로 가서) cargo build --release > build 파일에 있는 실행파일 등록 > 사용
-
-powershell이나 자신의 쉘에 등록을 하면 간편하게(?) 쓸수 있음.<br>
-+ 윈도우 환경 (on Powershell_profile)
-  + Set-Alias todo C:\[설치경로]\todoList.exe
-+ 리눅스 환경 (on .bash_profile)
-  + alias todo='[설치경로]\todoList'
-+ 유닉스 환경
-  + 리눅스와 동일
- 
- 와 같은 방법으로 사용.
+install : https://github.com/DocRAID/todo_list_for_cmd/releases/tag/v1.0.1
  
 ### 명령어
 + todo : 명령어를 보여줍니다.
@@ -20,11 +10,6 @@ powershell이나 자신의 쉘에 등록을 하면 간편하게(?) 쓸수 있음
 + todo rm [todo's id] : todd id를 기반으로 삭제합니다.
 + todo ls : 작성하고 추가한 할 일을 모두 보여줍니다.
 + todo clear : 리스트 초기화.
++ todo location : 경로 보기.
 
-기본 Todo.txt 의 기본 경로는 사용자의 document directory에 있습니다. (없다면 만들어주세요)
-***
 _Result : Rust 기본 문법을 익히고 Rust 파일 시스템, osString, 오류제어 문법을 다루어 보며 실습함._
-<br>
-_Todo : 러스트를 더 배우며 코드 최적화._
-<br>
-~~아 코드 개더럽다~~

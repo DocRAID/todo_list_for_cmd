@@ -125,7 +125,7 @@ pub fn list_clear(path: &PathBuf) {
         fs::remove_file(path.clone()).expect("Err: Failed to delete file");
         println!("List cleared");
     } else {
-        println!("List lear cancelled");
+        println!("List clear cancelled");
     }
 }
 fn validate_dir(path: &PathBuf) {
